@@ -9,6 +9,12 @@ type SearchUserType = {
 type SearchResult = {
     items: SearchUserType[]
 }
+type UserType = {
+    login: string
+    id: number
+    avatar_url: string
+    followers: number
+}
 
 export const Github = () => {
     const [selectedUser, setSelectedUser] = useState<SearchUserType | null>(null);
@@ -30,6 +36,13 @@ export const Github = () => {
                 setUsers(res.data.items)
             })
     }, [searchTerm]);
+    useEffect(() => {
+        axios
+            .get<SearchResult>(`https://api.github.com/users/users/${selectedUser?.login}`)
+            .then(res => {
+                setUsers(res.data.items)
+            })
+    }, []);
 
     return <div className={s.container}>
         <div>
