@@ -24,7 +24,7 @@ export const UserDetails = ({selectedUser}: UserDetailsPropsType) => {
     }, [selectedUser]);
 
     useEffect(() => {
-        if(seconds < 1) {
+        if (seconds < 1) {
             setUsersDetail(null)
         }
     }, [seconds])
@@ -32,8 +32,6 @@ export const UserDetails = ({selectedUser}: UserDetailsPropsType) => {
     return <div>
         {usersDetail && <div>
             <Timer
-                usersDetail={usersDetail}
-                // onReset={setUsersDetail}
                 setSeconds={setSeconds}
                 seconds={seconds}
             />
