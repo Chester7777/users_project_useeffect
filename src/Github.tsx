@@ -40,8 +40,6 @@ export const Github = () => {
                 term={searchTerm}
                 selectedUser={selectedUser}
                 onUserSelect={setSelectedUser}
-
-                // items={selectedUser}
             />
         </div>
         <div>

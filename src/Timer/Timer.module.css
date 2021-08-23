@@ -1,0 +1,9 @@
+
+.timerBox {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: 2px solid crimson;
+    background: rgba(145, 143, 143, 0.84);
+}

@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react"
+import s from "../Timer/Timer.module.css"
 
 
 type TimerPropsType = {
@@ -35,7 +36,7 @@ export const Timer = (props: TimerPropsType) => {
     //     return () => clearInterval(intervalId)
     // }, [seconds]);
 
-    return <div>
+    return <div className={s.timerBox}>
         {seconds}
     </div>
 }

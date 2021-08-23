@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
 import {SearchUserType, UserType} from "./Github";
-import {Timer} from "./Timer";
+import { Timer } from "./Timer/Timer";
 
 
 type UserDetailsPropsType = {
